@@ -10,8 +10,9 @@
     height:30px;
     margin-right:10px;
     border:none;
-    background-color:rgb(238, 236, 230);
+    background-color:rgb(245, 244, 236);
     padding:10px;
+    outline:none;
 }
 
 .taskButton{
