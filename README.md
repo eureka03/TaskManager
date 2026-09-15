@@ -1,4 +1,5 @@
-# Taskmanager
+# TaskManager
+User app for adding , modifying and deleting tasks , An app for basically managing tasks
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.23.
 
