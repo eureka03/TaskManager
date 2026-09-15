@@ -1,0 +1,21 @@
+.form-content{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+}
+
+.textInput{
+    width:70%;
+    height:30px;
+    margin-right:10px;
+    border:none;
+    background-color:rgb(238, 236, 230);
+    padding:10px;
+}
+
+.taskButton{
+   border: none;
+   background-color: rgb(226, 43, 165);
+   width:100px;
+}
