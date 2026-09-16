@@ -1,0 +1,31 @@
+<div class="table-structure">
+    <div class="table-heading">
+        <div class="heading">Task Name</div>
+        <div class="heading">Priority</div>
+        <div class="heading">Completed</div>
+        <div class="heading">+</div>
+    </div>
+    <div class="table-rows">
+        @for(task of tasks; track task.id){
+        
+         <div class="row-item"> 
+            <div class="item">
+                {{task.name}}
+            </div>
+            <div class="item">
+                {{task.priority}}
+            </div>
+            <div class="item">
+                {{task.completed}}
+            </div>
+            <div class="item">
+                <button>delete</button>
+            </div>
+         </div>  
+        
+        }
+    </div>
+    
+
+</div>
+    

@@ -1,11 +1,31 @@
 import { Component, signal } from '@angular/core';
+import {Task} from "../../models/Task"
 
 @Component({
     selector:"app-tasklist",
-    templateUrl:"tasklist.css",
+    templateUrl:"./tasklist.html",
+    styleUrl:"./tasklist.css",
     imports:[]
 })
 
-export default class TaskList{
+export  class TaskList{
+
+    tasks: Task[] = [
+        {
+            id:1,
+            name:"Testing task",
+            priority:"high",
+            completed:false
+        },
+        {
+            id:1,
+            name:"Testing task",
+            priority:"high",
+            completed:false
+        }
+
+    ];
+    
+    
     
 }

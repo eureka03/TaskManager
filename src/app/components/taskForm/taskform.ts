@@ -8,6 +8,6 @@ import { Component, signal } from '@angular/core';
 
 })
 
-export  class TaskForm{
+export class TaskForm{
 
 }
