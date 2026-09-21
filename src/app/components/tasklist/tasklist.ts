@@ -1,31 +1,25 @@
 import { Component, signal } from '@angular/core';
-import {Task} from "../../models/Task"
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import {tasks} from "../../models/Task"
 
 @Component({
     selector:"app-tasklist",
     templateUrl:"./tasklist.html",
     styleUrl:"./tasklist.css",
-    imports:[]
+    imports:[FontAwesomeModule]
 })
 
 export  class TaskList{
 
-    tasks: Task[] = [
-        {
-            id:1,
-            name:"Testing task",
-            priority:"high",
-            completed:false
-        },
-        {
-            id:1,
-            name:"Testing task",
-            priority:"high",
-            completed:false
-        }
+    faTrash = faTrash;
 
-    ];
-    
-    
+    tasks = tasks;
+
+    handleDelete(id:number){
+
+        this.tasks = this.tasks.filter((i)=> i.id !== id )
+
+    }
     
 }

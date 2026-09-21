@@ -1,4 +1,4 @@
 <div class="form-content">
-    <input type="text" class="textInput" placeholder="Add Task">
-    <button class="taskButton">Add Task</button>
+    <input #textInput type="text" class="textInput" placeholder="Add Task">
+    <button class="taskButton" (click)="handleAdd(textInput.value)">Add Task</button>
 </div>

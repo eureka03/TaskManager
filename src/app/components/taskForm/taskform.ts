@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import {tasks} from "../../models/Task"
 
 @Component({
     selector:'app-form',
@@ -9,5 +10,19 @@ import { Component, signal } from '@angular/core';
 })
 
 export class TaskForm{
+
+    handleAdd(task:string){
+        const newTask = {
+            id:2,
+            name:task,
+            priority:"low",
+            completed:false
+        }
+
+        tasks.push(newTask);
+
+
+
+    }
 
 }

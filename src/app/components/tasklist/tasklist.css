@@ -6,14 +6,13 @@
 
 .table-heading{
     display:flex;
-    justify-content: space-between;
     background-color:rgb(244, 244, 243);
   
     
 }
 
 .heading{
-    width:100px;
+    width:50%;
     text-align: center;
     padding:10px;
     border:1px solid rgb(229, 229, 229);
@@ -23,7 +22,6 @@
 
 .row-item{
     display:flex;
-    justify-content: space-between;
     border:1px solid rgb(229, 229, 229);
     
   
@@ -31,7 +29,7 @@
 }
 
 .item{
-    width:100px;
+    width:50%;
     padding:10px;
     text-align:center;
     border:1px solid rgb(229, 229, 229);

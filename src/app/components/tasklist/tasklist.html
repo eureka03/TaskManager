@@ -19,13 +19,12 @@
                 {{task.completed}}
             </div>
             <div class="item">
-                <button>delete</button>
+                <fa-icon [icon]="faTrash" (click)="handleDelete(task.id)"></fa-icon>
             </div>
          </div>  
         
         }
     </div>
     
-
 </div>
     
