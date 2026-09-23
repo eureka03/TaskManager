@@ -16,7 +16,7 @@
                 {{task.priority}}
             </div>
             <div class="item">
-                {{task.completed}}
+                <input type="checkbox" [(ngModel)] ="checked" (click)="handleCheck(task.id)">
             </div>
             <div class="item">
                 <fa-icon [icon]="faTrash" (click)="handleDelete(task.id)"></fa-icon>

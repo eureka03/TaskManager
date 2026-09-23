@@ -1,15 +1,18 @@
 import { Component, signal } from '@angular/core';
 import {tasks} from "../../models/Task"
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector:'app-form',
     templateUrl:'./taskform.html',
     styleUrl:'./taskform.css',
-    imports:[]
+    imports:[FormsModule]
 
 })
 
 export class TaskForm{
+
+    task = "";
 
     handleAdd(task:string){
         const newTask = {
@@ -20,6 +23,7 @@ export class TaskForm{
         }
 
         tasks.push(newTask);
+        this.task = "";
 
 
 

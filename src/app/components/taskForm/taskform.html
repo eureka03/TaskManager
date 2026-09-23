@@ -1,4 +1,4 @@
 <div class="form-content">
-    <input #textInput type="text" class="textInput" placeholder="Add Task">
+    <input #textInput type="text" class="textInput" placeholder="Add Task" [(ngModel)]="task">
     <button class="taskButton" (click)="handleAdd(textInput.value)">Add Task</button>
 </div>
