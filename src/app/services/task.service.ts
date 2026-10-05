@@ -1,16 +1,22 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
-@Injectable({
+
+@Injectable ({
     providedIn:'root'
+
 })
 export class TaskService{
-
-    private apiUrl = 'http://localhost:8080/tasks';
-
+     private baseUrl = "http://localhost:8080";
     constructor(private http:HttpClient){}
+    
 
-    getTasks(){
-        return this.http.get(this.apiUrl);
+    getTaks() {
+        return this.http.get(`${this.baseUrl}/api/v1/tasks`);
     }
+
+    getTaskById(id:number){
+        return this.http.get(`${this.baseUrl}/api/v1/${id}`);
+    }
+
 }
