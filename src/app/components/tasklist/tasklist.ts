@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import {tasks} from "../../models/Task"
+import { Task } from '../../models/Task';
 import { FormsModule } from '@angular/forms';
+import { TaskService } from '../../services/task.service';
 
 @Component({
     selector:"app-tasklist",
@@ -12,15 +13,27 @@ import { FormsModule } from '@angular/forms';
 })
 
 export  class TaskList{
+    tasks =signal<Task[]>([]);
+    constructor(private taskService:TaskService){
+        this.loadTasks();
+    };
     checked= false;
 
     faTrash = faTrash;
 
-    tasks = tasks;
-
+    loadTasks() {
+        this.taskService.getTasks().subscribe({
+            next: (tasks) =>{
+                this.tasks.set(tasks);
+                console.log(tasks);
+                
+            }
+        });
+       
+    }
     handleDelete(id:number){
 
-        this.tasks = this.tasks.filter((i)=> i.id !== id )
+        this.tasks.update(list => list.filter(i=> i.id !== id ))
 
     }
 
@@ -29,5 +42,4 @@ export  class TaskList{
         console.log(this.checked);
 
     }
-    
 }
