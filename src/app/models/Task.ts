@@ -1,3 +1,5 @@
+import { signal } from '@angular/core';
+
  export interface Task {
    id:number,
    name:string,
@@ -5,6 +7,4 @@
    completed:boolean
  }
 
-export const tasks: Task[] = [
-
-];
+export const tasks =  signal<Task[]>([]);

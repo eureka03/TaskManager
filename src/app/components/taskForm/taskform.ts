@@ -13,17 +13,19 @@ import { FormsModule } from '@angular/forms';
 export class TaskForm{
 
     task = "";
+    count = 1;
 
     handleAdd(task:string){
         const newTask = {
-            id:2,
+            id:this.count,
             name:task,
             priority:"low",
             completed:false
         }
 
-        tasks.push(newTask);
+        tasks.update(tasks=> [...tasks , newTask]);
         this.task = "";
+        this.count++;
 
 
 
