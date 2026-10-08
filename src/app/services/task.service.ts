@@ -21,4 +21,8 @@ export class TaskService{
         return this.http.get(`${this.baseUrl}/api/${id}`);
     }
 
+    postTask(body:Omit<Task,"id">):Observable<Task>{
+        return this.http.post<Task>(`${this.baseUrl}/api/tasks`,body);
+    }
+
 }
