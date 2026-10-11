@@ -1,4 +1,9 @@
+@if(isLoggedIn){
+    <app-taskmanager></app-taskmanager>
+}@else if (isMember) {
+    <app-login></app-login>
 
-<app-login></app-login>
-<app-form></app-form>
-<app-tasklist></app-tasklist>
+}@else {
+    <app-registration></app-registration>
+}
+
